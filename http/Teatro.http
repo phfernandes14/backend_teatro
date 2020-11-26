@@ -1,0 +1,45 @@
+@baseUrl = http://localhost:4000
+
+//CRIAR
+###
+POST {{baseUrl}}/evento
+Content-Type: application/json
+
+{
+    "nome": "Show EEEE",
+    "descricao":"show cover da banda EEEE ",
+    "data": "2020-05-13",
+    "valor": "15",
+    "vagas":"50"
+}
+
+//LIST 
+###
+GET {{baseUrl}}/evento
+Content-Type: application/json
+
+###
+@id = 5fbf99113185bb29f83c5324
+
+//LIST ID
+GET {{baseUrl}}/evento/{{id}}
+Content-Type: application/js
+
+//REMOVE
+###
+DELETE {{baseUrl}}/evento/{{id}}
+Content-Type: application/json
+
+//EDIT
+###
+PUT {{baseUrl}}/evento
+Content-Type: application/json
+
+{
+    "_id": "5fbf99113185bb29f83c5324",
+    "nome": "show BBBB",
+    "descricao":"show cover da banda BBBB",
+    "data": "2020-12-13",
+    "valor": "10",
+    "vagas":"100"
+}
