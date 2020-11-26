@@ -34,7 +34,7 @@ router.post('/',
     check('descricao','Informe a descrição do evento, o campo deve ter de 10 a 50 caracteres').not().isEmpty().isLength({min:10, max:50}),
     check('data', 'Informe a data do evento, no formato xxxx-xx-xx').not().isEmpty().isDate(),
     check('valor', 'Informe o valor do evento, o valor minímo é 0').not().isEmpty().isFloat().isLength({min:0}),
-    check('vagas', 'Informe a quantidade de vagas evento, o valor minímo é 0').not().isEmpty().isNumeric().isLength({min:0}),
+    check('vagas', 'Informe a quantidade de vagas do evento, o valor minímo é 0').not().isEmpty().isNumeric().isLength({min:0}),
     
 ],
 async(req, res)=>{
